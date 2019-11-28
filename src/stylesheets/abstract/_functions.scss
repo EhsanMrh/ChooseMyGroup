@@ -1,0 +1,9 @@
+// for set font urls 
+@function font($font-name, $weight: '') {
+    $font-urls: url($public-path + 'fonts/' + $font-name + '/'+ $font-name + $weight + '.eot'),
+                url($public-path + 'fonts/' + $font-name + '/'+ $font-name + $weight + '.eot?#iefix') format('embedded-opentype'),
+                url($public-path + 'fonts/' + $font-name + '/'+ $font-name + $weight + '.woff') format('woff'),
+                url($public-path + 'fonts/' + $font-name + '/'+ $font-name + $weight + '.ttf') format('truetype');
+
+    @return $font-urls;
+}
